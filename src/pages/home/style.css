@@ -1,0 +1,35 @@
+/* body{
+    background: linear-gradient(90deg, #6610B6 0%, #0A0003 35%, #1C3C85 100%);
+} */
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tab{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.item{
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 40px;
+}
+
+.item:hover{
+    background-color: #2e3037;
+}
+
+.active{
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
