@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 import "./style.css"
+import CompanyList from './CompanyList';
 
 export const Home = () => {
 
@@ -28,41 +29,46 @@ export const Home = () => {
     }
 
   return (
-    <div>
-        <div className='title'>
-            Create your own
-        </div>
+//     <div>
+//         <div className='title'>
+//             Create your own
+//         </div>
 
-        <div className='tab'>
-            <div className={`item ${isHomeOpen ? "active" : ""}`} onClick={handleHomeOpen}>Home</div>
-            <div className={`item ${isAwayOpen ? "active" : ""}`} onClick={handleAwayOpen}>Away</div>
-            <div className={`item ${isThirdOpen ? "active" : ""}`} onClick={handleThirdOpen}>Third</div>
-        </div>
+//         <div className='tab'>
+//             <div className={`item ${isHomeOpen ? "active" : ""}`} onClick={handleHomeOpen}>Home</div>
+//             <div className={`item ${isAwayOpen ? "active" : ""}`} onClick={handleAwayOpen}>Away</div>
+//             <div className={`item ${isThirdOpen ? "active" : ""}`} onClick={handleThirdOpen}>Third</div>
+//         </div>
     
-    {
-      isHomeOpen && (
-        <div>
-                Home
-        </div>
-      )  
-    }
+//     {
+//       isHomeOpen && (
+//         <div>
+//                 Home
+//         </div>
+//       )  
+//     }
 
-    {
-        isAwayOpen && (
-            <div>
-                Away
-            </div>
-        )
-    }
+//     {
+//         isAwayOpen && (
+//             <div>
+//                 Away
+//             </div>
+//         )
+//     }
 
-{
-        isThirdOpen && (
-            <div>
-                Third
-            </div>
-        )
-    }
+// {
+//         isThirdOpen && (
+//             <div>
+//                 Third
+//             </div>
+//         )
+//     }
 
-    </div>
+//     </div>
+
+<>
+
+<CompanyList />
+</>
   )
 }
