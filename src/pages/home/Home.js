@@ -1,74 +1,32 @@
-import React, {useState} from 'react'
-
-import "./style.css"
-import CompanyList from './CompanyList';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const Home = () => {
+  const changeLanguageHandler = (lang) => {
+    localStorage.setItem("lang", lang);
+    window.location.reload();
+  };
 
-    const [isHomeOpen, setIsHomeOpen] = useState(true);
-    const [isAwayOpen, setIsAwayOpen] = useState(false);
-    const [isThirdOpen, setIsThirdOpen] = useState(false);
+  let langName;
 
+  if (localStorage.getItem("lang") === "en") {
+    langName = <p onClick={() => changeLanguageHandler("ge")}>EN</p>;
+  } else if (localStorage.getItem("lang") === "ge") {
+    langName = <p onClick={() => changeLanguageHandler("jp")}>GE</p>;
+  } else if (localStorage.getItem("lang") === "jp") {
+    langName = <p onClick={() => changeLanguageHandler("de")}>JP</p>;
+  } else {
+    langName = <p onClick={() => changeLanguageHandler("en")}>DE</p>;
+  }
 
-    const handleHomeOpen = () =>{
-        setIsHomeOpen(true);
-        setIsAwayOpen(false);
-        setIsThirdOpen(false);
-    }
-
-    const handleAwayOpen = () =>{
-        setIsHomeOpen(false);
-        setIsAwayOpen(true);
-        setIsThirdOpen(false);
-    }
-
-    const handleThirdOpen = () =>{
-        setIsHomeOpen(false);
-        setIsAwayOpen(false);
-        setIsThirdOpen(true);
-    }
+  const { t } = useTranslation();
 
   return (
-//     <div>
-//         <div className='title'>
-//             Create your own
-//         </div>
-
-//         <div className='tab'>
-//             <div className={`item ${isHomeOpen ? "active" : ""}`} onClick={handleHomeOpen}>Home</div>
-//             <div className={`item ${isAwayOpen ? "active" : ""}`} onClick={handleAwayOpen}>Away</div>
-//             <div className={`item ${isThirdOpen ? "active" : ""}`} onClick={handleThirdOpen}>Third</div>
-//         </div>
-    
-//     {
-//       isHomeOpen && (
-//         <div>
-//                 Home
-//         </div>
-//       )  
-//     }
-
-//     {
-//         isAwayOpen && (
-//             <div>
-//                 Away
-//             </div>
-//         )
-//     }
-
-// {
-//         isThirdOpen && (
-//             <div>
-//                 Third
-//             </div>
-//         )
-//     }
-
-//     </div>
-
-<>
-
-<CompanyList />
-</>
-  )
-}
+    <>
+      {t("home")}
+      {t("about")}
+      {t("book")}
+      {langName}
+    </>
+  );
+};
