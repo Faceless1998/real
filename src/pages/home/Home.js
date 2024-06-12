@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const changeLanguageHandler = (lang) => {
@@ -26,6 +27,7 @@ export const Home = () => {
       {t("home")}
       {t("about")}
       {t("book")}
+      <Link to="/login">შესვლა</Link>
       {langName}
     </>
   );
