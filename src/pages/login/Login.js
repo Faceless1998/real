@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import "./login.css";
+import "./newlog.css";
+import { IoPersonAddOutline } from "react-icons/io5";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaSkullCrossbones } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -52,30 +54,47 @@ const Login = () => {
   };
 
   return (
-    <div className="login-form">
-      <h2>შესვლა</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="მეილი"
-          />
+    <div className="login-back">
+      <div className="form-container">
+        <div className="profile-icon">
+          <IoPersonAddOutline />
         </div>
-        <div>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="პაროლი"
-          />
+        <div className="inside-form">
+          <div className="title">Welcome Back</div>
+          <div className="form-details">
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label>Username *</label>
+                <input
+                  placeholder="Enter Your Username"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label>Password *</label>
+                <input
+                  placeholder="Enter Your Password"
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="checker">
+                <input type="checkbox" /> <span>Remember me</span>
+              </div>
+              <div>
+                <button type="submit" className="btn button">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <button type="submit">შესვლა</button>
-      </form>
-      <Link to="/register">გსურთ შექმნათ ანგარიში? </Link>
+      </div>
       {message &&
         (success ? (
           <div className={`message ${!showMessage ? "hidden" : ""}`}>
@@ -87,7 +106,7 @@ const Login = () => {
             <FaSkullCrossbones className="uncheck" />
             {message}
           </div>
-        ))}{" "}
+        ))}
     </div>
   );
 };

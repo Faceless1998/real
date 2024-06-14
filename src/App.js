@@ -5,7 +5,7 @@ import { About } from "./pages/about/About";
 import { Book } from "./pages/book/Book";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
-
+import NewLogin from "./pages/login/NewLogin";
 function App() {
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
         <Route path="/book" element={<Book />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/new" element={<NewLogin />} />
       </Routes>
 
     </>
