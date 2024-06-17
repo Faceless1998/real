@@ -1,0 +1,62 @@
+[
+    {
+        "id":1,
+        "title":"To Kill A Mockingbird",
+        "author":"Harper Lee",
+        "description":"Book About Family, Law and Father's Love"
+    },
+    {
+        "id": 2,
+        "title": "Go Set a Watchman",
+        "author": "Harper Lee",
+        "description": "A sequel to 'To Kill a Mockingbird,' it continues the story of Scout Finch as an adult, addressing her perspectives on racial tensions and personal values."
+    },
+    {
+        "id": 3,
+        "title": "A Tree Grows in Brooklyn",
+        "author": "Betty Smith",
+        "description": "This coming-of-age novel follows a young girl, Francie Nolan, growing up in Brooklyn in the early 20th century, dealing with poverty and striving for a better life."
+    },
+    {
+        "id": 4,
+        "title": "The Secret Life of Bees",
+        "author": "Sue Monk Kidd",
+        "description": "Set in South Carolina in 1964, the story follows a young girl, Lily Owens, who escapes her troubled life by running away to live with a trio of African American beekeepers."
+    },
+    {
+        "id": 5,
+        "title": "Cry, the Beloved Country",
+        "author": "Alan Paton",
+        "description": "Set in South Africa, this novel deals with racial injustice and social change, following a black priest's search for his son in Johannesburg."
+    },
+    {
+        "id": 6,
+        "title": "The Grapes of Wrath",
+        "author": "John Steinbeck",
+        "description": "The story of the Joad family, who are displaced from their Oklahoma farm during the Great Depression and travel to California in search of a better life, highlighting issues of poverty and injustice."
+    },
+    {
+        "id": 7,
+        "title": "I Know Why the Caged Bird Sings",
+        "author": "Maya Angelou",
+        "description": "An autobiography that covers the early years of the author, dealing with themes of racism, identity, and resilience."
+    },
+    {
+        "id": 8,
+        "title": "Beloved",
+        "author": "Toni Morrison",
+        "description": "A powerful story about a runaway slave and the haunting legacy of slavery, exploring themes of motherhood, memory, and identity."
+    },
+    {
+        "id": 9,
+        "title": "The Adventures of Huckleberry Finn",
+        "author": "Mark Twain",
+        "description": "A classic novel that addresses themes of race and identity through the journey of a young boy and a runaway slave traveling down the Mississippi River."
+    },
+    {
+        "id": 10,
+        "title": "Their Eyes Were Watching God",
+        "author": "Zora Neale Hurston",
+        "description": "This novel follows Janie Crawford, an African American woman in the early 20th century, as she searches for her own identity and independence through three marriages and personal struggles."
+    }
+]
