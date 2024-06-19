@@ -1,59 +1,50 @@
-import React from 'react'
-import IMG1 from "./../../assets/bellingham-desktop-800x1104.webp"
-import IMG2 from  "./../../assets/modric-desktop-800x1104.webp"
-import "./about.css"
-
-const players = [
-  {
-    name:"Bellingham",
-    number:"5",
-    image:IMG1,
-    id:1,
-    career:"nvlkfnldng",
-    teams:["Dortmund FC", "Real Vardrid"]
-  },
-  {
-    name:"Modric",
-    number:"10",
-    image:IMG2,
-    id:2
-  }
-  ,
-  {
-    name:"Vini JR",
-    number:"10",
-    image:IMG2,
-    id:3
-  }
-  ,
-  {
-    name:"Courtois JR",
-    number:"1",
-    image:IMG2,
-    id:4
-  }
-]
-
+import React, { useState, useEffect } from "react";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa";
+import "./about.css";
+import faqs from "./faq.json";
 
 export const About = () => {
+  const [faqData, setFaqData] = useState([]);
+
+  useEffect(() => {
+    setFaqData(faqs);
+  }, []);
+
+  const handleClick = (index) => {
+    setFaqData((prevFaqs) =>
+      prevFaqs.map((faq, i) =>
+        i === index ? { ...faq, show: !faq.show } : faq
+      )
+    );
+  };
+
   return (
     <div>
-      <div className='container'>
-      {
-        players.map(player => (
-          <div className='card' key={player.id}>
-            <div className='image'>
-              <img src={player.image} alt={player.name} />
+      <h1>Facts & Questions</h1>
+      <h3>
+        Sample text. Click to select the text box. Click again or double click
+        to start editing the text.
+      </h3>
+      <div className="faq">
+        {faqData.map((faq, index) => (
+          <div>
+            <div
+              className="element"
+              key={index}
+              onClick={() => handleClick(index)}
+            >
+              <div className="faq-question">
+                <div>{faq.question}</div>
+                <div> {faq.show ? <FaMinus /> : <FaPlus />}</div>
+              </div>
             </div>
-            <div className='information'>
-              <div className='name'>#{player.number} {player.name}</div>
-              <div className='button'>Info</div>
-          </div>
 
+            {faq.show && <div className="faq-answer">
+              {faq.answer}</div>}
           </div>
-        ))
-      }
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};

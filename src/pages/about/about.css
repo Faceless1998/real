@@ -1,50 +1,42 @@
-.container{
-    width: 100%;
+.faq{
+    background-color: #FFFFFF;
+    padding: 30px 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.card{
-    width: 450px;
-    position: relative;
-    border-radius: 20px;
-}
-
-.card img{
-    width: 100%;
-    border-radius: 20px;
-}
-
-.information{
-    position: absolute;
-    bottom: 50px;
-    width: 80%;
-    border-radius: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
+.element>div{
+    width: 1000px;
+    background-color: #F2F2F2;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    align-items: center;
 }
 
-.name{
-    font-size: 25px;
+.element:hover{
+    background-color: #FEF9E6;
+}
+
+.faq-question{
+    font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
+}
+.quest-icon{
+    font-size: 30px;
 }
 
-.card .button{
-    width: 100px;
-    height: 36px;
-    background-color: purple;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 36px;
-    vertical-align: middle;
-    border-radius: 20px;
-    color: white;
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.faq-answer{
+    width: 1000px;
+    padding: 50px 20px;
 }
